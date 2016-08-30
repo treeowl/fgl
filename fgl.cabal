@@ -125,3 +125,20 @@ benchmark fgl-benchmark {
     ghc-options: -Wall -O2
 
 }
+
+benchmark fgl-benchmark {
+    default-language: Haskell98
+
+    type: exitcode-stdio-1.0
+
+    hs-source-dirs: test
+
+    main-is: benchmark.hs
+
+    build-depends:   fgl
+                   , base
+                   , microbench
+
+    ghc-options: -Wall
+
+}
